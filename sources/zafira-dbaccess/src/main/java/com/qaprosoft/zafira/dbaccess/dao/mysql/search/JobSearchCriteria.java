@@ -3,12 +3,11 @@ package com.qaprosoft.zafira.dbaccess.dao.mysql.search;
 public class JobSearchCriteria
 {
 	private Long upstreamJobId;
-	private String upstreamJobUrl;
 	private Integer upstreamJobBuildNumber;
 	private String owner;
 	private String scmURL;
 	private Integer hashcode;
-	private Integer failurePercent;
+	private String cause;
 
 	public String getOwner()
 	{
@@ -28,16 +27,6 @@ public class JobSearchCriteria
 	public void setUpstreamJobId(Long upstreamJobId)
 	{
 		this.upstreamJobId = upstreamJobId;
-	}
-
-	public String getUpstreamJobUrl()
-	{
-		return upstreamJobUrl;
-	}
-
-	public void setUpstreamJobUrl(String upstreamJobUrl)
-	{
-		this.upstreamJobUrl = upstreamJobUrl;
 	}
 
 	public Integer getUpstreamJobBuildNumber()
@@ -70,13 +59,11 @@ public class JobSearchCriteria
 		this.hashcode = hashcode;
 	}
 
-	public Integer getFailurePercent()
-	{
-		return failurePercent;
-	}
+    public String getCause() {
+        return cause;
+    }
 
-	public void setFailurePercent(Integer failurePercent)
-	{
-		this.failurePercent = failurePercent;
-	}
+    public void setCause(String cause) {
+        this.cause = cause;
+    }
 }
