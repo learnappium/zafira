@@ -80,11 +80,14 @@
             currentPage: resolvedTestRuns.page,
             searchFormIsEmpty: true,
             collapseFilter: false,
+            collapseNewFilter: false,
             fastSearch: angular.copy(FAST_SEARCH_TEMPLATE),
             filters: [],
             filter: angular.copy(DEFAULT_FILTER_VALUE),
             filterBlockExpand: false,
+            filterNewBlockExpand: false,
             addFilterExpanded: false,
+            addNewFilterExpanded: false,
             selectedFilterRange: {
                 selectedTemplate: null,
                 selectedTemplateName: null,
@@ -106,7 +109,8 @@
             matchMode: matchMode,
             reset: reset,
             getTestRuns: getTestRuns,
-            clearAndOpenFilterBlock: clearAndOpenFilterBlock
+            clearAndOpenFilterBlock: clearAndOpenFilterBlock,
+            clearAndOpenNewFilterBlock: clearAndOpenNewFilterBlock
         };
 
         vm.$onInit = function() {
@@ -256,6 +260,11 @@
         function clearAndOpenFilterBlock(value) {
             clearFilter();
             vm.collapseFilter = value;
+        }
+
+        function clearAndOpenNewFilterBlock(value) {
+            vm.collapseNewFilter = !vm.collapseNewFilter;
+            console.log("yer")
         }
 
         function clearFilter() {

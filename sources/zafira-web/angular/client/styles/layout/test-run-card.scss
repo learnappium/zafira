@@ -508,6 +508,9 @@
 }
 .p-tests-runs {
     @media screen and (max-width: $breakpoint-mobile) {
+        &.bg-gray {
+            background-color: #777;
+        }
         &__section {
             & .fixed-search-column {
                 min-height: auto;
@@ -533,6 +536,65 @@
         }
         #itemsCount {
             opacity: 0.5;
+        }
+        #search-input.form-control, #search-input.form-control:active, #search-input.form-control:focus{
+            border-color: transparent !important;
+        }
+        .reviewed:active,.reviewed:hover {
+            background-color: $green-new;
+        }
+        .reviewed {
+            border: none;
+        }
+        .search {
+            &-wrapper {
+                max-width: 48px;
+                & i {
+                    display: block;
+                    padding: 15px;
+                    color: rgba(0, 0, 0, 0.5) !important;
+                }
+                &-row {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            &__popup-form{
+                position: absolute;
+                z-index: 3;
+                background-color: #fff;
+                width: 100%;
+                border-top: 1px rgba(0, 0, 0, 0.10) solid;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                padding: 0 16px;
+                box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+            &__item {
+                width: 104px;
+                height: 28px;
+                opacity: 0.3;
+                border-radius: 14px;
+                color: white;
+                background-color: $dark-coal-new;
+                letter-spacing: 0.2px;
+                text-align: center;
+                font-size: 11px;
+                font-weight: 500;
+                line-height: 1;
+                border: none !important;
+                &._active {
+                    opacity: 0.9;
+                }
+            }
+            &__items {
+                padding: 6px 0;
+                display: flex;
+                justify-content: space-around;
+            }
+            &__form {
+                padding: 20px 0 28px;
+            }
         }
     }
 }
