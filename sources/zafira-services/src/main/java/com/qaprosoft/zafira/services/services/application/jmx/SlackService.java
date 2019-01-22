@@ -126,7 +126,7 @@ public class SlackService implements IJMXService<SlackContext> {
             getContext(Setting.Tool.SLACK).setSlack(getSlack().sendToChannel(channel));
 
             String elapsed = countElapsedInSMH(tr.getElapsed());
-            String zafiraUrl = urlResolver.buildWebURL() + "/#!/tests/runs/" + tr.getId();
+            String zafiraUrl = urlResolver.buildWebURL() + "/tests/runs/" + tr.getId();
             String jenkinsUrl = tr.getJob().getJobURL() + "/" + tr.getBuildNumber();
             String status = TestRunResultsEmail.buildStatusText(tr);
 
@@ -160,7 +160,7 @@ public class SlackService implements IJMXService<SlackContext> {
         if (channel != null) {
             getContext(Setting.Tool.SLACK).setSlack(getSlack().sendToChannel(channel));
 
-            String zafiraUrl = urlResolver.buildWebURL() + "/#!/tests/runs/" + tr.getId();
+            String zafiraUrl = urlResolver.buildWebURL() + "/tests/runs/" + tr.getId();
             String jenkinsUrl = tr.getJob().getJobURL() + "/" + tr.getBuildNumber();
             String status = TestRunResultsEmail.buildStatusText(tr);
 

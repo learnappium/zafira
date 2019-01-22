@@ -81,7 +81,7 @@
                                     <table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:separate;" align="left" border="0">
                                         <tbody>
                                         <tr>
-                                            <td style="border:none;border-radius:none;color:#fff;cursor:auto;padding:10px 25px;" align="center" valign="middle" bgcolor="#26a69a"><a href="${workspaceURL}/#!/signup?token=${token}" style="text-decoration:none;background:#26a69a;color:#fff;font-family:Roboto, Tahoma, sans-serif;font-size:13px;font-weight:normal;line-height:120%;text-transform:none;margin:0px;" target="_blank">Join Now</a></td>
+                                            <td style="border:none;border-radius:none;color:#fff;cursor:auto;padding:10px 25px;" align="center" valign="middle" bgcolor="#26a69a"><a href="${workspaceURL}/signup?token=${token}" style="text-decoration:none;background:#26a69a;color:#fff;font-family:Roboto, Tahoma, sans-serif;font-size:13px;font-weight:normal;line-height:120%;text-transform:none;margin:0px;" target="_blank">Join Now</a></td>
                                         </tr>
                                         </tbody>
                                     </table>
