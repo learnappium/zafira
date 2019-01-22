@@ -2,8 +2,15 @@
     'use strict';
 
     angular.module('app')
-        .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$ocLazyLoadProvider',
-                function($stateProvider, $urlRouterProvider, $httpProvider, $ocLazyLoadProvider) {
+        .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$ocLazyLoadProvider', '$locationProvider',
+                function($stateProvider, $urlRouterProvider, $httpProvider, $ocLazyLoadProvider, $locationProvider) {
+
+                    /*$provide.decorator('$sniffer', function($delegate) {
+                           $delegate.history = true;
+                           return $delegate;
+                       });*/
+
+                    $locationProvider.html5Mode(true);
 
                 $stateProvider
 	                .state('dashboard', {
