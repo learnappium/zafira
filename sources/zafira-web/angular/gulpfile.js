@@ -5,6 +5,9 @@ var config = require('./gulp.config')();
 var del = require('del');
 var $ = require('gulp-load-plugins')({lazy: true});
 
+gulp.task('dev', ['inject', 'sass'], function() {
+});
+
 gulp.task('help', $.taskListing);
 gulp.task('default', ['help']);
 
