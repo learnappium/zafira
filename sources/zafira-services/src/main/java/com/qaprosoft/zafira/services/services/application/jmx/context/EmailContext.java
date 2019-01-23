@@ -15,6 +15,7 @@
  ******************************************************************************/
 package com.qaprosoft.zafira.services.services.application.jmx.context;
 
+import org.apache.commons.lang.StringUtils;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
@@ -34,7 +35,11 @@ public class EmailContext extends AbstractContext
         {
             private static final long serialVersionUID = -7384945982042097581L;
             {
-                setProperty("mail.smtp.auth", "true");
+                if(StringUtils.isEmpty(user) && StringUtils.isEmpty(password)){
+                    setProperty("mail.smtp.auth", "false");
+                } else {
+                    setProperty("mail.smtp.auth", "true");
+                }
                 setProperty("mail.smtp.starttls.enable", "true");
             }
         });
