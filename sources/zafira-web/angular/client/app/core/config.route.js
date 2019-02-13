@@ -128,6 +128,8 @@
                     .state('users', {
                         url: '/users',
                         template: require('../_users/list.html'),
+                        controller: 'UserViewController',
+                        controllerAs: '$ctrl',
                         data: {
                             requireLogin: true,
                             classes: 'p-users'
